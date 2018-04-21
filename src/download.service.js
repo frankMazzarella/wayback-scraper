@@ -36,11 +36,10 @@ module.exports.download = (url, filename) => {
       .on('end', () => {
         resolve();
       })
-      .pipe(fs.createWriteStream(path.join(outputDir, filename)))
-      // .then(() => resolve())
-      // .catch((error) => {
-      //   logger.error(`error downloading ${filename}: ${error}`);
-      //   reject(error);
-      // });
+      .on('error', function(error) {
+        logger.error(`error downloading ${filename}: ${error}`);
+        reject(error);
+      })
+      .pipe(fs.createWriteStream(path.join(outputDir, filename)));
   });
 }

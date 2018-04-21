@@ -1,0 +1,1 @@
+put urls in array in /src/app.js then do npm install then do npm start.
