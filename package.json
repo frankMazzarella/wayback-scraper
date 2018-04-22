@@ -1,13 +1,16 @@
 {
-  "name": "wayback",
+  "name": "wayback-scraper",
   "version": "1.0.0",
   "description": "",
   "main": "./src/app.js",
   "scripts": {
     "start": "node ./src/app"
   },
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Frank Mazzarella",
+    "email": "mazzarella.frank@gmail.com"
+  },
+  "license": "MIT",
   "dependencies": {
     "log4js": "^2.5.3",
     "request": "^2.85.0"
